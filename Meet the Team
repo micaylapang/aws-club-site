@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meet the Team | AWS Rice Cloud Club</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: white;
+      background: radial-gradient(circle at 20% 20%, #1f4068 0%, transparent 40%),
+                  radial-gradient(circle at 80% 0%, #0a192f 0%, transparent 40%),
+                  #020617;
+      overflow-x: hidden;
+    }
+
+    /* subtle grid overlay */
+    body::before {
+      content: "";
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      z-index: 0;
+    }
+
+    header {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 60px 20px 30px;
+    }
+
+    header img {
+      width: 160px;
+      filter: drop-shadow(0 0 10px rgba(59,130,246,0.6));
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin: 15px 0 5px;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      color: #94a3b8;
+      font-size: 1rem;
+    }
+
+    .team-container {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 50px 40px;
+    }
+
+    .card {
+      width: 30%;
+      max-width: 280px;
+      padding: 25px;
+      border-radius: 20px;
+      text-align: center;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      transition: all 0.35s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* glow effect */
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent, rgba(147,197,253,0.25), transparent);
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    .card:hover {
+      transform: translateY(-12px) scale(1.03);
+      box-shadow: 0 0 30px rgba(59,130,246,0.4);
+      border-color: rgba(59,130,246,0.6);
+    }
+
+    .card img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 2px solid rgba(147,197,253,0.8);
+      box-shadow: 0 0 15px rgba(255,153,0,0.5);
+    }
+
+    .name {
+      font-size: 1.15rem;
+      font-weight: 600;
+    }
+
+    .role {
+      font-size: 0.9rem;
+      color: #93c5fd;
+      margin-top: 6px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.8rem;
+      color: #64748b;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* layout control */
+    .card:nth-child(-n+3) {
+      width: 28%;
+    }
+
+    .card:nth-child(n+4) {
+      width: 20%;
+    }
+
+    /* responsive */
+    @media (max-width: 900px) {
+      .card {
+        width: 45% !important;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        width: 90% !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="/mnt/data/c265e4fc-4246-4508-bb42-e34ae1eed017.png" alt="AWS Rice Cloud Club Logo">
+    <h1>Meet the Team</h1>
+    <p>Builders. Engineers. Cloud Enthusiasts.</p>
+  </header>
+
+  <section class="team-container">
+
+    <div class="card">
+      <img src="images/michael_yu.jpg" alt="Michael Yu">
+      <div class="name">Michael Yu</div>
+      <div class="role">Co-founder, Captain</div>
+    </div>
+
+    <div class="card">
+      <img src="images/benjamin_mao.jpg" alt="Benjamin Mao">
+      <div class="name">Benjamin Mao</div>
+      <div class="role">Co-founder, Captain</div>
+    </div>
+
+    <div class="card">
+      <img src="images/mike_zhang.jpg" alt="Mike Zhang">
+      <div class="name">Mike Zhang</div>
+      <div class="role">Academic Lead</div>
+    </div>
+
+    <div class="card">
+      <img src="images/kenneth_cadungog.jpg" alt="Kenneth Cadungog">
+      <div class="name">Kenneth Cadungog</div>
+      <div class="role">Academic Lead</div>
+    </div>
+
+    <div class="card">
+      <img src="images/miranda_schriver.jpg" alt="Miranda Schriver">
+      <div class="name">Miranda Schriver</div>
+      <div class="role">Marketing Manager</div>
+    </div>
+
+    <div class="card">
+      <img src="images/duran_mohabbat.jpg" alt="Duran Mohabbat">
+      <div class="name">Duran Mohabbat</div>
+      <div class="role">Event Manager</div>
+    </div>
+
+    <div class="card">
+      <img src="images/carter_sakai.jpg" alt="Carter Sakai">
+      <div class="name">Carter Sakai</div>
+      <div class="role">Academic Project Lead</div>
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 AWS Rice Cloud Club
+  </footer>
+
+</body>
+</html>
